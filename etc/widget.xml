@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_FacebookWidget
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="Mageplaza\FacebookWidget\Block\Widget" id="mageplaza_facebook_widget">
+        <label>Mageplaza Facebook Widget</label>
+        <description>Create facebook widget to store</description>
+        <parameters>
+            <parameter name="url" xsi:type="text" required="true" visible="true">
+                <label translate="true">Facebook Url</label>
+            </parameter>
+            <parameter name="tabs" xsi:type="multiselect" required="true" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\Tabs">
+                <label translate="true">Tabs</label>
+            </parameter>
+            <parameter name="width" xsi:type="text" required="false" visible="true">
+                <label translate="true">Width</label>
+                <value>340</value>
+            </parameter>
+            <parameter name="height" xsi:type="text" required="false" visible="true" >
+                <label translate="true">Height</label>
+                <value>500</value>
+            </parameter>
+            <parameter name="hide_cover" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
+                <label translate="true">Hide cover photo</label>
+                <description>Hide cover photo in the header</description>
+            </parameter>
+            <parameter name="show_facepile" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
+                <label translate="true">Show profile photos</label>
+                <description>Show profile photos when friends like this.</description>
+            </parameter>
+            <parameter name="hide_cta" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
+                <label>Hide the custom call to action</label>
+                <description>Hide the custom call to action button (if available)</description>
+            </parameter>
+            <parameter name="small_header" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
+                <label translate="true">Small Header</label>
+                <description>Use the small header instead.</description>
+            </parameter>
+            <parameter name="adapt_container_width" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
+                <label translate="true">Adapt Width</label>
+                <description>Try to fit inside the container width</description>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
