@@ -34,6 +34,21 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
+            <group id="snippet" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Snippet Code</label>
+                <field id="xml" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>XML File</label>
+                    <comment>Insert a note displayed in XML file. You can also change the options for it</comment>
+                </field>
+                <field id="block" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>CMS Page, CMS Static Block</label>
+                    <comment>You can paste the above block of snippet into any page in Magento 2. You can also change the options for it</comment>
+                </field>
+                <field id="template" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Template .phtml file</label>
+                    <comment>Open a .phtml file and insert where you want to display facebook widget. You can also change the options for it</comment>
+                </field>
+            </group>
         </section>
     </system>
 </config>
