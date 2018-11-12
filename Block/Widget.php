@@ -20,48 +20,15 @@
  */
 namespace Mageplaza\FacebookWidget\Block;
 
-use Magento\Framework\View\Element\Template;
-use Magento\Widget\Block\BlockInterface;
-use Mageplaza\FacebookWidget\Helper\Data as helperData;
-use Magento\Framework\Locale\Resolver;
-
-class Widget extends Template implements BlockInterface
+class Widget extends Facebook
 {
     protected $_template = "facebookwidget.phtml";
 
-    /**
-     * @var helperData
-     */
-    protected $helperData;
-
-    /**
-     * @var Resolver
-     */
-    protected $locale;
-
-    /**
-     * Widget constructor.
-     *
-     * @param Template\Context $context
-     * @param helperData $helperData
-     * @param Resolver $resolver
-     * @param array $data
-     */
-    public function __construct(
-        Template\Context $context,
-        helperData $helperData,
-        Resolver $resolver,
-        array $data = []
-    )
-    {
-        $this->helperData = $helperData;
-        $this->locale = $resolver;
-
-        parent::__construct($context, $data);
-    }
-
-    public function getHelperData() {
-        return $this->helperData;
+    public function getAllOptions() {
+        $option = $this->getData('options');
+        if ($option == 0) {
+            $this->setData(array_merge($this->helperData->getFbWidgetConfig(),$this->getData()));
+        }
     }
 
     /**
@@ -70,23 +37,11 @@ class Widget extends Template implements BlockInterface
      * @return mixed|string
      */
     public function getFacebookUrl() {
-        $url = $this->getData('url');
+        $url = $this->getData('options') == 1 ? $this->getData('url') : $this->helperData->getUrlConfig();
         if ($url && strpos($url,'http') === false) {
             $url = 'https://'.$url;
         }
 
         return $url;
-    }
-
-    /**
-     * Get Language by storeId
-     *
-     * @return array|mixed
-     * @throws \Magento\Framework\Exception\NoSuchEntityException
-     */
-    public function getLanguage() {
-        $lang = $this->locale->getLocale();
-
-        return $lang;
     }
 }

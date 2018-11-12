@@ -22,43 +22,27 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <fbwidget>
+        <fbplugin>
             <general>
                 <enabled>1</enabled>
             </general>
-            <snippet>
-                <xml>
-                    <![CDATA[<block class="Mageplaza\FacebookWidget\Block\Widget" template="facebookwidget.phtml">
-                        <arguments>
-                            <argument name="url" xsi:type="string">https://www.facebook.com/facebook</argument>
-                            <argument name="width" xsi:type="string">340</argument>
-                            <argument name="height" xsi:type="string">500</argument>
-                            <argument name="tabs" xsi:type="string">timeline</argument>
-                            <argument name="hide_cover" xsi:type="string">false</argument>
-                            <argument name="show_facepile" xsi:type="string">true</argument>
-                            <argument name="hide_cta" xsi:type="string">false</argument>
-                            <argument name="small_header" xsi:type="string">false</argument>
-                            <argument name="adapt_container_width" xsi:type="string">true</argument>
-                        </arguments>
-                    </block>]]>
-                </xml>
-                <block>
-                    <![CDATA[{{ block="Mageplaza\FacebookWidget\Block\Widget" url="https://www.facebook.com/facebook" width="340" height="500" tabs="timeline" hide_cover="false" show_facepile="true" hide_cta="false" small_header="false" adapt_container_width="true" }}]]>
-                </block>
-                <template>
-                    <![CDATA[<?php echo $block->getLayout()->createBlock(\Mageplaza\FacebookWidget\Block\Widget::class)
-    ->setUrl("https://www.facebook.com/neuconfessions")
-    ->setTabs('timeline,events')
-    ->setWidth('340')
-    ->setHeight('500')
-    ->setHideCover('false')
-    ->setShowFacepile('true')
-    ->setHideCta('false')
-    ->setSmallHeader('false')
-    ->setAdaptContainerWidth('true')
-    ->toHtml();?>]]>
-                </template>
-            </snippet>
-        </fbwidget>
+            <fbwidget>
+                <enabled>1</enabled>
+                <tabs>timeline</tabs>
+                <width>340</width>
+                <height>500</height>
+                <hide_cover>false</hide_cover>
+                <show_facepile>true</show_facepile>
+                <hide_cta>false</hide_cta>
+                <small_header>false</small_header>
+                <adapt_container_width>true</adapt_container_width>
+            </fbwidget>
+            <fbcomments>
+                <enabled>0</enabled>
+                <title>Facebook comments</title>
+                <width>550</width>
+                <num_posts>5</num_posts>
+            </fbcomments>
+        </fbplugin>
     </default>
 </config>

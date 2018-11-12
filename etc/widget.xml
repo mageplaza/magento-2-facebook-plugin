@@ -25,39 +25,69 @@
         <label>Mageplaza Facebook Widget</label>
         <description>Create facebook widget to store</description>
         <parameters>
+            <parameter name="options" xsi:type="select" required="true" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\Options">
+                <label>Facebook Widget options</label>
+            </parameter>
             <parameter name="url" xsi:type="text" required="true" visible="true">
                 <label translate="true">Facebook Url</label>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="tabs" xsi:type="multiselect" required="true" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\Tabs">
                 <label translate="true">Tabs</label>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="width" xsi:type="text" required="false" visible="true">
                 <label translate="true">Width</label>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
                 <value>340</value>
             </parameter>
             <parameter name="height" xsi:type="text" required="false" visible="true" >
                 <label translate="true">Height</label>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
                 <value>500</value>
             </parameter>
             <parameter name="hide_cover" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
                 <label translate="true">Hide cover photo</label>
                 <description>Hide cover photo in the header</description>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="show_facepile" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
                 <label translate="true">Show profile photos</label>
                 <description>Show profile photos when friends like this.</description>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="hide_cta" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
                 <label>Hide the custom call to action</label>
                 <description>Hide the custom call to action button (if available)</description>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="small_header" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
                 <label translate="true">Small Header</label>
                 <description>Use the small header instead.</description>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
             <parameter name="adapt_container_width" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
                 <label translate="true">Adapt Width</label>
                 <description>Try to fit inside the container width</description>
+                <depends>
+                    <parameter name="options" value="1" />
+                </depends>
             </parameter>
         </parameters>
     </widget>

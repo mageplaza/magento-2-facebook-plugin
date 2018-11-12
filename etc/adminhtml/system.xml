@@ -22,31 +22,141 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="fbwidget" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="0">
+        <section id="fbplugin" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="0">
             <class>separator-top</class>
-            <label>Facebook Widget</label>
+            <label>Facebook Plugin</label>
             <tab>mageplaza</tab>
             <resource>Mageplaza_FacebookWidget::configuration</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>General Configuration</label>
+                <label>General</label>
+                <field id="head" translate="label" type="button" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Mageplaza\Core\Block\Adminhtml\System\Config\Head</frontend_model>
+                    <comment><![CDATA[
+                        <ul class="mageplaza-head">
+                            <li><a href="https://docs.mageplaza.com/facebook-widget/" target="_blank">User Guide</a></li>
+                            <li><a href="https://mageplaza.freshdesk.com/" target="_blank">Helpdesk</a> </li>
+                            <li><a href="https://goo.gl/forms/SrTm7YUxZoCzixhH3" target="_blank">Request features</a> </li>
+                            <li>Allow customers login with <a href="https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=extension&utm_medium=text&utm_campaign=facebook" target="_blank">Mageplaza Social Login</a></li>
+                            <span>It is free to download and use.</span>
+                        </ul>
+                        ]]></comment>
+                </field>
                 <field id="enabled" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Facebook Widget</label>
+                    <label>Enable Facebook Plugin</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select Yes to enable this module</comment>
+                </field>
+                <field id="url" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook URL</label>
+                    <depends>
+                        <field id="fbplugin/general/enabled">1</field>
+                    </depends>
+                    <comment>The URL of the Facebook Page</comment>
                 </field>
             </group>
-            <group id="snippet" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Snippet Code</label>
-                <field id="xml" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>XML File</label>
-                    <comment>Insert a note displayed in XML file. You can also change the options for it</comment>
+            <group id="fbwidget" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook Widget</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook Widget</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select Yes to use Facebook Widget</comment>
                 </field>
-                <field id="block" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>CMS Page, CMS Static Block</label>
-                    <comment>You can paste the above block of snippet into any page in Magento 2. You can also change the options for it</comment>
+                <field id="tabs" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tabs</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\Tabs</source_model>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
                 </field>
-                <field id="template" translate="label" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Template .phtml file</label>
-                    <comment>Open a .phtml file and insert where you want to display facebook widget. You can also change the options for it</comment>
+                <field id="width" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Width</label>
+                    <comment>The pixel width of the plugin. Min is 180 and max is 500</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="height" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Height</label>
+                    <comment>The pixel height of the plugin. Min is 70</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="hide_cover" translate="label" type="select" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide cover photo</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Hide cover photo in the header</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_facepile" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show profile photos</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Show profile photos when friends like this.</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="hide_cta" translate="label" type="select" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide the custom call to action</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Hide the custom call to action button (if available)</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="small_header" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Small Header</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Use the small header instead.</comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="adapt_container_width" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Adapt Width</label>
+                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Try to fit inside the container width. </comment>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="snippet" translate="label" type="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Snippet Code</label>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                    <frontend_model>Mageplaza\FacebookWidget\Block\Adminhtml\System\Snippet</frontend_model>
+                </field>
+            </group>
+            <group id="fbcomments" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook Comments</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook Comment</label>
+                    <comment>Select Yes to add a Facebook Comments tab in Product detail page.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <depends>
+                        <field id="fbplugin/fbcomments/enabled">1</field>
+                    </depends>
+                    <comment>Enter the title of the tab. Default: Facebook comment</comment>
+                </field>
+                <field id="width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Width</label>
+                    <depends>
+                        <field id="fbplugin/fbcomments/enabled">1</field>
+                    </depends>
+                    <comment>The width of the comments plugin on the webpage. The minimum width is 320px</comment>
+                </field>
+                <field id="num_posts" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Posts</label>
+                    <depends>
+                        <field id="fbplugin/fbcomments/enabled">1</field>
+                    </depends>
+                    <comment>The number of comments to show by default. The minimum value is 1.</comment>
                 </field>
             </group>
         </section>

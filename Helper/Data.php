@@ -25,5 +25,57 @@ use Mageplaza\Core\Helper\AbstractData;
 
 class Data extends AbstractData
 {
-    const CONFIG_MODULE_PATH = 'fbwidget';
+    const CONFIG_MODULE_PATH = 'fbplugin';
+
+    /**
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function getUrlConfig($storeId = null)
+    {
+        return $this->getConfigGeneral('url',$storeId);
+    }
+
+    /**
+     * Retrieve all the values in the configuration of the fb widget
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function getFbWidgetConfig($storeId = null)
+    {
+        return $this->getModuleConfig('fbwidget',$storeId);
+    }
+
+    /**
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function isEnabledFbWidget($storeId = null)
+    {
+        return $this->getModuleConfig('fbwidget/enabled',$storeId);
+    }
+
+    /**
+     * Retrieve all the values in the configuration of the fb comments
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function getFbCommentsConfig($storeId = null)
+    {
+        return $this->getModuleConfig('fbcomments',$storeId);
+    }
+
+    /**
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function isEnabledFbComments($storeId = null)
+    {
+        return $this->getModuleConfig('fbcomments/enabled',$storeId);
+    }
 }
