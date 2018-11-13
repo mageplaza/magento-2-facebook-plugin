@@ -22,7 +22,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="fbplugin" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="0">
+        <section id="fbplugin" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Facebook Plugin</label>
             <tab>mageplaza</tab>
@@ -46,6 +46,15 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to enable this module</comment>
                 </field>
+                <field id="app_id" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App Id</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Create a Facebook app <a href="https://developers.facebook.com/apps" target="_bank">here.</a>
+Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
+                    <depends>
+                        <field id="fbplugin/general/enabled">1</field>
+                    </depends>
+                </field>
             </group>
             <group id="fbwidget" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Facebook Widget</label>
@@ -54,7 +63,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to use Facebook Widget</comment>
                 </field>
-                <field id="url" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Facebook URL</label>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -67,30 +76,31 @@
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
+                    <comment>Tabs to render, i.e. timeline, events, messages. Use a comma-separated list to add multiple tabs, i.e. timeline, events,  Default: timeline</comment>
                 </field>
-                <field id="width" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="width" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
                     <comment>The pixel width of the plugin. Min: 180 px , Max: 500 px , Default: 340 px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="height" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Height</label>
                     <comment>The pixel height of the plugin. Min.70px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="hide_cover" translate="label" type="select" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="hide_cover" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide cover photo</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
-                    <comment>Hide cover photo in the header</comment>
+                    <comment>Hide cover photo in the header. Default: No</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="show_facepile" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="show_facepile" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Show profile photo</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
                     <comment>Show profile photos when friends like this.</comment>
@@ -98,7 +108,7 @@
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="hide_cta" translate="label" type="select" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="hide_cta" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide the custom Call To Action</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
                     <comment>Hide the custom call to action button (if available)</comment>
@@ -106,23 +116,23 @@
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="small_header" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Small Header</label>
+                <field id="small_header" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Small header</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
                     <comment>Use the small header instead.</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="adapt_container_width" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="adapt_container_width" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Adapt Width</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
-                    <comment>Try to fit inside the container width. </comment>
+                    <comment>Try to fit inside the container width. Default: Yes</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
-                <field id="snippet" translate="label" type="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="snippet" translate="label" type="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Snippet Code</label>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -157,13 +167,6 @@
                         <field id="fbplugin/fbcomments/enabled">1</field>
                     </depends>
                     <comment>The number of comments to show by default. The minimum value is 1.</comment>
-                </field>
-                <field id="app_id" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Facebook App Id</label>
-                    <validate>required-entry</validate>
-                    <depends>
-                        <field id="fbplugin/fbcomments/enabled">1</field>
-                    </depends>
                 </field>
             </group>
         </section>

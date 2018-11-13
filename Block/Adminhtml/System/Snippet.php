@@ -32,7 +32,7 @@ class Snippet extends Field
      */
     protected function _getElementHtml(AbstractElement $element)
     {
-        $html = '<div class="control-value" style="padding-top: 8px">';
+        $html = '<div class="control-value" style="padding-top: 8px; font-size: 11px">';
         $html .= '<p>Use the following code to show facebook widget in any places which you want.</p>';
 
         $html .= '<strong>CMS Page/Static Block</strong><br />';

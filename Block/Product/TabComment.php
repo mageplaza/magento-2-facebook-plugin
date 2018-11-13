@@ -72,11 +72,4 @@ class TabComment extends Facebook
 
         return false;
     }
-
-    public function getAppId()
-    {
-        $options = $this->helperData->getFbCommentsConfig();
-        return $options['app_id'];
-    }
-
 }

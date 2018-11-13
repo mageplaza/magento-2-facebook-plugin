@@ -74,4 +74,14 @@ abstract class Facebook extends Template implements BlockInterface
         return $lang;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAppId()
+    {
+        $appId = $this->helperData->getConfigGeneral('app_id');
+
+        return $appId;
+    }
+
 }

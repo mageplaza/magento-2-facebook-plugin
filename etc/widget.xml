@@ -29,7 +29,7 @@
                 <label>Facebook widget options</label>
             </parameter>
             <parameter name="url" xsi:type="text" required="true" visible="true">
-                <label translate="true">Facebook Url</label>
+                <label translate="true">Facebook URL</label>
                 <depends>
                     <parameter name="options" value="1" />
                 </depends>
