@@ -33,7 +33,7 @@ class Snippet extends Field
     protected function _getElementHtml(AbstractElement $element)
     {
         $html = '<div class="control-value" style="padding-top: 8px">';
-        $html .= '<p>Use following code to show facebook widget in any place which you want.</p>';
+        $html .= '<p>Use the following code to show facebook widget in any places which you want.</p>';
 
         $html .= '<strong>CMS Page/Static Block</strong><br />';
         $html .= '<pre style="background-color: #f5f5dc"><code>{{block class="Mageplaza\FacebookWidget\Block\Widget"}}</code></pre>';

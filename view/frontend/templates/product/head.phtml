@@ -20,12 +20,4 @@
  */
 ?>
 
-<?php if ($block->isEnabled()) : ?>
-    <?php $options = $block->getHelperData()->getFbCommentsConfig() ?>
-    <div class="fb-comments"
-         data-href="<?php echo $block->getRequest()->getUriString() ?>"
-         data-numposts="<?php echo isset($options['num_posts']) ? $options['num_posts'] : 5 ?>"
-         data-width ="<?php echo $options['width']?>
-    ">
-    </div>
-<?php endif; ?>
+<meta property="fb:app_id" content="<?php echo $block->getAppId() ?>"/>

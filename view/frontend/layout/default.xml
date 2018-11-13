@@ -24,7 +24,7 @@
     <body>
         <referenceContainer name="after.body.start">
             <block class="Mageplaza\FacebookWidget\Block\Widget" name="mageplaza-facebook-widget"
-                   as="mageplaza.facebook.widget" template="Mageplaza_FacebookWidget::sdk.phtml" before="-"/>
+                   as="mageplaza.facebook.widget" template="Mageplaza_FacebookWidget::sdk.phtml" before="-" ifconfig="fbplugin/fbwidget/enabled"/>
         </referenceContainer>
     </body>
 </page>

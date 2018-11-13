@@ -28,16 +28,6 @@ class Data extends AbstractData
     const CONFIG_MODULE_PATH = 'fbplugin';
 
     /**
-     * @param null $storeId
-     *
-     * @return mixed
-     */
-    public function getUrlConfig($storeId = null)
-    {
-        return $this->getConfigGeneral('url',$storeId);
-    }
-
-    /**
      * Retrieve all the values in the configuration of the fb widget
      * @param null $storeId
      *
@@ -46,6 +36,16 @@ class Data extends AbstractData
     public function getFbWidgetConfig($storeId = null)
     {
         return $this->getModuleConfig('fbwidget',$storeId);
+    }
+
+    /**
+     * @param null $storeId
+     *
+     * @return mixed
+     */
+    public function getUrlConfig($storeId = null)
+    {
+        return $this->getModuleConfig('fbwidget/url',$storeId);
     }
 
     /**

@@ -26,7 +26,7 @@
         <description>Create facebook widget to store</description>
         <parameters>
             <parameter name="options" xsi:type="select" required="true" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\Options">
-                <label>Facebook Widget options</label>
+                <label>Facebook widget options</label>
             </parameter>
             <parameter name="url" xsi:type="text" required="true" visible="true">
                 <label translate="true">Facebook Url</label>
@@ -62,21 +62,21 @@
                 </depends>
             </parameter>
             <parameter name="show_facepile" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
-                <label translate="true">Show profile photos</label>
+                <label translate="true">Show profile photo</label>
                 <description>Show profile photos when friends like this.</description>
                 <depends>
                     <parameter name="options" value="1" />
                 </depends>
             </parameter>
             <parameter name="hide_cta" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
-                <label>Hide the custom call to action</label>
+                <label>Hide the custom Call To Action</label>
                 <description>Hide the custom call to action button (if available)</description>
                 <depends>
                     <parameter name="options" value="1" />
                 </depends>
             </parameter>
             <parameter name="small_header" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse">
-                <label translate="true">Small Header</label>
+                <label translate="true">Small header</label>
                 <description>Use the small header instead.</description>
                 <depends>
                     <parameter name="options" value="1" />

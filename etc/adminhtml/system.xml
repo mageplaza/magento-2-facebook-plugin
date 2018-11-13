@@ -36,7 +36,7 @@
                             <li><a href="https://docs.mageplaza.com/facebook-widget/" target="_blank">User Guide</a></li>
                             <li><a href="https://mageplaza.freshdesk.com/" target="_blank">Helpdesk</a> </li>
                             <li><a href="https://goo.gl/forms/SrTm7YUxZoCzixhH3" target="_blank">Request features</a> </li>
-                            <li>Allow customers login with <a href="https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=extension&utm_medium=text&utm_campaign=facebook" target="_blank">Mageplaza Social Login</a></li>
+                            <li>Allow customers to login with <a href="https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=extension&utm_medium=text&utm_campaign=facebook" target="_blank">Mageplaza Social Login</a></li>
                             <span>It is free to download and use.</span>
                         </ul>
                         ]]></comment>
@@ -46,13 +46,6 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to enable this module</comment>
                 </field>
-                <field id="url" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Facebook URL</label>
-                    <depends>
-                        <field id="fbplugin/general/enabled">1</field>
-                    </depends>
-                    <comment>The URL of the Facebook Page</comment>
-                </field>
             </group>
             <group id="fbwidget" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Facebook Widget</label>
@@ -60,6 +53,13 @@
                     <label>Enable Facebook Widget</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to use Facebook Widget</comment>
+                </field>
+                <field id="url" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook URL</label>
+                    <depends>
+                        <field id="fbplugin/fbwidget/enabled">1</field>
+                    </depends>
+                    <comment>The URL of the Facebook Page</comment>
                 </field>
                 <field id="tabs" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Tabs</label>
@@ -70,14 +70,14 @@
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
-                    <comment>The pixel width of the plugin. Min is 180 and max is 500</comment>
+                    <comment>The pixel width of the plugin. Min: 180 px , Max: 500 px , Default: 340 px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
                 <field id="height" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Height</label>
-                    <comment>The pixel height of the plugin. Min is 70</comment>
+                    <comment>The pixel height of the plugin. Min.70px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
@@ -91,7 +91,7 @@
                     </depends>
                 </field>
                 <field id="show_facepile" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Show profile photos</label>
+                    <label>Show profile photo</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
                     <comment>Show profile photos when friends like this.</comment>
                     <depends>
@@ -99,7 +99,7 @@
                     </depends>
                 </field>
                 <field id="hide_cta" translate="label" type="select" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Hide the custom call to action</label>
+                    <label>Hide the custom Call To Action</label>
                     <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
                     <comment>Hide the custom call to action button (if available)</comment>
                     <depends>
@@ -134,7 +134,7 @@
                 <label>Facebook Comments</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Facebook Comment</label>
-                    <comment>Select Yes to add a Facebook Comments tab in Product detail page.</comment>
+                    <comment>Select Yes to add Facebook Comment Tab in Product Detail Page.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -149,7 +149,7 @@
                     <depends>
                         <field id="fbplugin/fbcomments/enabled">1</field>
                     </depends>
-                    <comment>The width of the comments plugin on the webpage. The minimum width is 320px</comment>
+                    <comment>The width of the comment plugin on the webpage. The minimum width is 320px</comment>
                 </field>
                 <field id="num_posts" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Number of Posts</label>
@@ -157,6 +157,13 @@
                         <field id="fbplugin/fbcomments/enabled">1</field>
                     </depends>
                     <comment>The number of comments to show by default. The minimum value is 1.</comment>
+                </field>
+                <field id="app_id" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App Id</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="fbplugin/fbcomments/enabled">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
