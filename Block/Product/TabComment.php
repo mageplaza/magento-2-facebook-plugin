@@ -14,18 +14,18 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
-namespace Mageplaza\FacebookWidget\Block\Product;
+namespace Mageplaza\FacebookPlugin\Block\Product;
 
 
 use Magento\Framework\Locale\Resolver;
 use Magento\Framework\View\Element\Template;
-use Mageplaza\FacebookWidget\Block\Facebook;
-use Mageplaza\FacebookWidget\Helper\Data as helperData;
+use Mageplaza\FacebookPlugin\Block\Facebook;
+use Mageplaza\FacebookPlugin\Helper\Data as helperData;
 use Magento\Framework\Registry;
 
 class TabComment extends Facebook

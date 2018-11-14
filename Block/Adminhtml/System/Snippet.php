@@ -14,12 +14,12 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
-namespace Mageplaza\FacebookWidget\Block\Adminhtml\System;
+namespace Mageplaza\FacebookPlugin\Block\Adminhtml\System;
 
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
@@ -36,14 +36,14 @@ class Snippet extends Field
         $html .= '<p>Use the following code to show facebook widget in any places which you want.</p>';
 
         $html .= '<strong>CMS Page/Static Block</strong><br />';
-        $html .= '<pre style="background-color: #f5f5dc"><code>{{block class="Mageplaza\FacebookWidget\Block\Widget"}}</code></pre>';
+        $html .= '<pre style="background-color: #f5f5dc"><code>{{block class="Mageplaza\FacebookPlugin\Block\Widget"}}</code></pre>';
 
         $html .= '<strong>Template .phtml file</strong><br />';
-        $html .= '<pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<?php echo $block->getLayout()->createBlock(\Mageplaza\FacebookWidget\Block\Widget::class)
+        $html .= '<pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<?php echo $block->getLayout()->createBlock(\Mageplaza\FacebookPlugin\Block\Widget::class)
     ->toHtml();?>') . '</code></pre>';
 
         $html .= '<strong>Layout file</strong><br />';
-        $html .= '<pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<block class="Mageplaza\FacebookWidget\Block\Widget" name="fbwidget" />') . '</code></pre>';
+        $html .= '<pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<block class="Mageplaza\FacebookPlugin\Block\Widget" name="fbwidget" />') . '</code></pre>';
 
         $html .= '</div>';
 

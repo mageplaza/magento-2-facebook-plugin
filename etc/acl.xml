@@ -15,7 +15,7 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
@@ -27,7 +27,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Mageplaza_FacebookWidget::configuration" title="Mageplaza Facebook Widget"/>
+                            <resource id="Mageplaza_FacebookPlugin::configuration" title="Mageplaza Facebook Plugin"/>
                         </resource>
                     </resource>
                 </resource>

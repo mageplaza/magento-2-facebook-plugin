@@ -15,15 +15,15 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
-        <route id="mpfbwidget" frontName="mpfbwidget">
-            <module before="Magento_Backend" name="Mageplaza_FacebookWidget"/>
+        <route id="mpfbplugin" frontName="mpfbplugin">
+            <module before="Magento_Backend" name="Mageplaza_FacebookPlugin"/>
         </route>
     </router>
 </config>

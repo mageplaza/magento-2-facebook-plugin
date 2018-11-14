@@ -15,7 +15,7 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
@@ -23,8 +23,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="after.body.start">
-            <block class="Mageplaza\FacebookWidget\Block\Widget" name="mageplaza-facebook-widget"
-                   as="mageplaza.facebook.widget" template="Mageplaza_FacebookWidget::sdk.phtml" before="-" ifconfig="fbplugin/fbwidget/enabled"/>
+            <block class="Mageplaza\FacebookPlugin\Block\Widget" name="mageplaza-facebook-plugin"
+                   as="mageplaza.facebook.plugin" template="Mageplaza_FacebookPlugin::sdk.phtml" before="-" ifconfig="fbplugin/general/enabled"/>
         </referenceContainer>
     </body>
 </page>

@@ -14,12 +14,12 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
-namespace Mageplaza\FacebookWidget\Setup;
+namespace Mageplaza\FacebookPlugin\Setup;
 
 use Magento\Catalog\Model\Product;
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
@@ -73,7 +73,7 @@ class InstallData implements InstallDataInterface
                 'visible'                 => true,
                 'required'                => false,
                 'user_defined'            => false,
-                'default'                 => '0',
+                'default'                 => '',
                 'searchable'              => false,
                 'filterable'              => false,
                 'comparable'              => false,

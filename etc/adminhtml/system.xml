@@ -15,7 +15,7 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_FacebookWidget
+ * @package     Mageplaza_FacebookPlugin
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
@@ -26,14 +26,14 @@
             <class>separator-top</class>
             <label>Facebook Plugin</label>
             <tab>mageplaza</tab>
-            <resource>Mageplaza_FacebookWidget::configuration</resource>
+            <resource>Mageplaza_FacebookPlugin::configuration</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="head" translate="label" type="button" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <frontend_model>Mageplaza\Core\Block\Adminhtml\System\Config\Head</frontend_model>
                     <comment><![CDATA[
                         <ul class="mageplaza-head">
-                            <li><a href="https://docs.mageplaza.com/facebook-widget/" target="_blank">User Guide</a></li>
+                            <li><a href="https://docs.mageplaza.com/facebook-plugin/" target="_blank">User Guide</a></li>
                             <li><a href="https://mageplaza.freshdesk.com/" target="_blank">Helpdesk</a> </li>
                             <li><a href="https://goo.gl/forms/SrTm7YUxZoCzixhH3" target="_blank">Request features</a> </li>
                             <li>Allow customers to login with <a href="https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=extension&utm_medium=text&utm_campaign=facebook" target="_blank">Mageplaza Social Login</a></li>
@@ -47,7 +47,7 @@
                     <comment>Select Yes to enable this module</comment>
                 </field>
                 <field id="app_id" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Facebook App Id</label>
+                    <label>Facebook App ID</label>
                     <validate>required-entry</validate>
                     <comment><![CDATA[Create a Facebook app <a href="https://developers.facebook.com/apps" target="_bank">here.</a>
 Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
@@ -72,7 +72,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="tabs" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Tabs</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\Tabs</source_model>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\Tabs</source_model>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
@@ -94,7 +94,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="hide_cover" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide cover photo</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Hide cover photo in the header. Default: No</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -102,7 +102,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="show_facepile" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Show profile photo</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Show profile photos when friends like this.</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -110,15 +110,15 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="hide_cta" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide the custom Call To Action</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
-                    <comment>Hide the custom call to action button (if available)</comment>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
+                    <comment>Hide the custom Call To Action button (if available)</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
                 <field id="small_header" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Small header</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Use the small header instead.</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -126,7 +126,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="adapt_container_width" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Adapt Width</label>
-                    <source_model>Mageplaza\FacebookWidget\Model\Config\Source\TrueFalse</source_model>
+                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Try to fit inside the container width. Default: Yes</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
@@ -137,7 +137,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
-                    <frontend_model>Mageplaza\FacebookWidget\Block\Adminhtml\System\Snippet</frontend_model>
+                    <frontend_model>Mageplaza\FacebookPlugin\Block\Adminhtml\System\Snippet</frontend_model>
                 </field>
             </group>
             <group id="fbcomments" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -152,7 +152,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <depends>
                         <field id="fbplugin/fbcomments/enabled">1</field>
                     </depends>
-                    <comment>Enter the title of the tab. Default: Facebook comment</comment>
+                    <comment>Enter the title of the tab. Default: Facebook comments</comment>
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
