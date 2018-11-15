@@ -57,11 +57,11 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
             </group>
             <group id="fbwidget" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Facebook Widget</label>
+                <label>Facebook Plugin</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Facebook Widget</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Select Yes to use Facebook Widget</comment>
+                    <comment>Select Yes to enable Facebook Plugin</comment>
                 </field>
                 <field id="url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Facebook URL</label>
@@ -76,18 +76,18 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
-                    <comment>Tabs to render, i.e. timeline, events, messages. Use a comma-separated list to add multiple tabs, i.e. timeline, events,  Default: timeline</comment>
+                    <comment>Tabs to render, e.g., timeline, events, messages. Use a comma-separated list to add multiple tabs, e.g., timeline, events. Default: timeline</comment>
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
-                    <comment>The pixel width of the plugin. Min: 180 px , Max: 500 px , Default: 340 px</comment>
+                    <comment>The pixel width of the plugin. Min. is 180 px & Max. is 500 px. Default: 340 px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
                 </field>
                 <field id="height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Height</label>
-                    <comment>The pixel height of the plugin. Min.70px</comment>
+                    <comment>The pixel height of the plugin. Min. is 70 px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
@@ -144,7 +144,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 <label>Facebook Comments</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Facebook Comment</label>
-                    <comment>Select Yes to add Facebook Comment Tab in Product Detail Page.</comment>
+                    <comment>Select Yes to add a Facebook Comments tab in Product Detail page.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -159,7 +159,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <depends>
                         <field id="fbplugin/fbcomments/enabled">1</field>
                     </depends>
-                    <comment>The width of the comment plugin on the webpage. The minimum width is 320px</comment>
+                    <comment>The width of the comment plugin on the webpage. The minimum width is 320 px</comment>
                 </field>
                 <field id="num_posts" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Number of Posts</label>
