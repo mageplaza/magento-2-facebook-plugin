@@ -43,7 +43,7 @@
             </parameter>
             <parameter name="width" xsi:type="text" required="false" visible="true">
                 <label translate="true">Width</label>
-                <description>The pixel width of the plugin. Min. is 180 px & Max. is 500 px. Default: 340 px</description>
+                <description>The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px</description>
                 <depends>
                     <parameter name="options" value="1" />
                 </depends>
