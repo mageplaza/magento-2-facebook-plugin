@@ -80,7 +80,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
-                    <comment>The pixel width of the plugin. Min. is 180 px & Max. is 500 px. Default: 340 px</comment>
+                    <comment>The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px</comment>
                     <depends>
                         <field id="fbplugin/fbwidget/enabled">1</field>
                     </depends>
