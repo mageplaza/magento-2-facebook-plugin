@@ -28,6 +28,7 @@ class Snippet extends Field
 {
     /**
      * @param AbstractElement $element
+     *
      * @return string
      */
     protected function _getElementHtml(AbstractElement $element)
@@ -40,8 +41,7 @@ class Snippet extends Field
         $html .= '</strong><br /><pre style="background-color: #f5f5dc"><code>{{block class="Mageplaza\FacebookPlugin\Block\Widget"}}</code></pre><strong>';
 
         $html .= __('Template .phtml file');
-        $html .= '</strong><br /><pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<?php echo $block->getLayout()->createBlock(\Mageplaza\FacebookPlugin\Block\Widget::class)
-    ->toHtml();?>') . '</code></pre><strong>';
+        $html .= '</strong><br /><pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<?php echo $block->getLayout()->createBlock("\Mageplaza\FacebookPlugin\Block\Widget::class")->toHtml();?>') . '</code></pre><strong>';
 
         $html .= __('Layout file');
         $html .= '</strong><br /><pre style="background-color: #f5f5dc"><code>' . $this->_escaper->escapeHtml('<block class="Mageplaza\FacebookPlugin\Block\Widget" name="fbwidget" />') . '</code></pre>';

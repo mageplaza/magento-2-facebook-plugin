@@ -21,7 +21,9 @@
 
 namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
-class TrueFalse implements \Magento\Framework\Option\ArrayInterface
+use Magento\Framework\Option\ArrayInterface;
+
+class TrueFalse implements ArrayInterface
 {
     /**
      * to option array
@@ -40,6 +42,7 @@ class TrueFalse implements \Magento\Framework\Option\ArrayInterface
                 'label' => __('Yes')
             ]
         ];
+
         return $options;
 
     }

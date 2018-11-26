@@ -20,7 +20,9 @@
  */
 namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
-class Tabs implements \Magento\Framework\Option\ArrayInterface
+use Magento\Framework\Option\ArrayInterface;
+
+class Tabs implements ArrayInterface
 {
     const TIMELINE = 'timeline';
     const EVENTS   = 'events';
@@ -47,6 +49,7 @@ class Tabs implements \Magento\Framework\Option\ArrayInterface
                 'label' => __('Messages')
             ]
         ];
+
         return $options;
 
     }

@@ -23,10 +23,10 @@ namespace Mageplaza\FacebookPlugin\Block\Product;
 
 
 use Magento\Framework\Locale\Resolver;
+use Magento\Framework\Registry;
 use Magento\Framework\View\Element\Template;
 use Mageplaza\FacebookPlugin\Block\Facebook;
 use Mageplaza\FacebookPlugin\Helper\Data as helperData;
-use Magento\Framework\Registry;
 
 class TabComment extends Facebook
 {
@@ -68,7 +68,7 @@ class TabComment extends Facebook
     public function setTabTitle()
     {
         $options = $this->helperData->getFbCommentsConfig();
-        $title    = __(isset($options['title']) ? $options['title'] : self::TITLE);
+        $title   = __(isset($options['title']) ? $options['title'] : self::TITLE);
         $this->setTitle($title);
     }
 
@@ -78,10 +78,9 @@ class TabComment extends Facebook
     public function isEnabled()
     {
         $product = $this->registry->registry('current_product');
-        if ($this->helperData->isEnabled() && $this->helperData->isEnabledFbComments() && $product->getMpFacebookComments() == 0) {
-            return true;
-        }
 
-        return false;
+        return $this->helperData->isEnabled() &&
+            $this->helperData->isEnabledFbComments() &&
+            $product->getMpFacebookComments() == 0;
     }
 }

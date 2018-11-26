@@ -22,10 +22,13 @@
 namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
 
-class Options implements \Magento\Framework\Option\ArrayInterface
+use Magento\Framework\Option\ArrayInterface;
+
+class Options implements ArrayInterface
 {
     const CONFIG = 0;
-    const CUSTOM   = 1;
+    const CUSTOM = 1;
+
     /**
      * @return array
      */
@@ -41,6 +44,7 @@ class Options implements \Magento\Framework\Option\ArrayInterface
                 'label' => __('Custom')
             ]
         ];
+
         return $options;
     }
 }

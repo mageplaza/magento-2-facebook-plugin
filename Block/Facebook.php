@@ -21,10 +21,10 @@
 
 namespace Mageplaza\FacebookPlugin\Block;
 
+use Magento\Framework\Locale\Resolver;
 use Magento\Framework\View\Element\Template;
 use Magento\Widget\Block\BlockInterface;
 use Mageplaza\FacebookPlugin\Helper\Data as helperData;
-use Magento\Framework\Locale\Resolver;
 
 abstract class Facebook extends Template implements BlockInterface
 {
@@ -54,7 +54,7 @@ abstract class Facebook extends Template implements BlockInterface
     )
     {
         $this->helperData = $helperData;
-        $this->locale = $resolver;
+        $this->locale     = $resolver;
 
         parent::__construct($context, $data);
     }
@@ -62,7 +62,8 @@ abstract class Facebook extends Template implements BlockInterface
     /**
      * @return helperData
      */
-    public function getHelperData() {
+    public function getHelperData()
+    {
         return $this->helperData;
     }
 
@@ -71,7 +72,8 @@ abstract class Facebook extends Template implements BlockInterface
      *
      * @return null|string
      */
-    public function getLanguage() {
+    public function getLanguage()
+    {
         $lang = $this->locale->getLocale();
 
         return $lang;

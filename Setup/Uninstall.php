@@ -35,6 +35,7 @@ class Uninstall implements UninstallInterface
 
     /**
      * Uninstall constructor.
+     *
      * @param EavSetupFactory $eavSetupFactory
      */
     public function __construct(EavSetupFactory $eavSetupFactory)
@@ -47,6 +48,7 @@ class Uninstall implements UninstallInterface
      *
      * @param SchemaSetupInterface $setup
      * @param ModuleContextInterface $context
+     *
      * @return void
      */
     public function uninstall(SchemaSetupInterface $setup, ModuleContextInterface $context)

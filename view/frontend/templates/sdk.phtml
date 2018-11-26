@@ -19,6 +19,7 @@
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
+/** @var Mageplaza\FacebookPlugin\Block\Facebook $block */
 if ($block->getHelperData()->isEnabled()) : ?>
     <?php $src = 'https://connect.facebook.net/'.$block->getLanguage().'/sdk.js#xfbml=1&version=v3.2&appId='.$block->getAppId().'&autoLogAppEvents=1'?>
 <div id="fb-root"></div>

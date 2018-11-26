@@ -42,12 +42,11 @@ class InstallData implements InstallDataInterface
      *
      * @param EavSetupFactory $eavSetupFactory
      */
-    public function __construct(
-        EavSetupFactory $eavSetupFactory
-    )
+    public function __construct(EavSetupFactory $eavSetupFactory)
     {
-        $this->eavSetupFactory      = $eavSetupFactory;
+        $this->eavSetupFactory = $eavSetupFactory;
     }
+
     /**
      * @param \Magento\Framework\Setup\ModuleDataSetupInterface $setup
      * @param \Magento\Framework\Setup\ModuleContextInterface $context
@@ -65,7 +64,7 @@ class InstallData implements InstallDataInterface
                 'backend'                 => '',
                 'frontend'                => '',
                 'label'                   => 'Disabled Facebook Comments',
-                'note'                    => 'Added by Mageplaza Facebook',
+                'note'                    => 'Added by Mageplaza Facebook Plugin',
                 'input'                   => 'select',
                 'class'                   => '',
                 'source'                  => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',

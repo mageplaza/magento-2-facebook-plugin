@@ -50,7 +50,7 @@
                     <label>Facebook App ID</label>
                     <validate>required-entry</validate>
                     <comment><![CDATA[Create a Facebook app <a href="https://developers.facebook.com/apps" target="_bank">here.</a>
-Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
+Go to <a href="developers.facebook.com/tools/comments" target="_bank">https://developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
                     <depends>
                         <field id="mpfbplugin/general/enabled">1</field>
                     </depends>
@@ -76,7 +76,6 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <depends>
                         <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
-                    <comment>Tabs to render, e.g., timeline, events, messages. Use a comma-separated list to add multiple tabs, e.g., timeline, events. Default: timeline</comment>
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>

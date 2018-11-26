@@ -20,7 +20,8 @@
  */
 ?>
 
-<?php if ($block->isEnabled()) : ?>
+<?php /** @var Mageplaza\FacebookPlugin\Block\Product\TabComment $block */
+if ($block->isEnabled()) : ?>
     <?php $options = $block->getHelperData()->getFbCommentsConfig() ?>
     <div class="fb-comments"
          data-href="<?php echo $block->getRequest()->getUriString() ?>"

@@ -23,7 +23,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="after.body.start">
-            <block class="Mageplaza\FacebookPlugin\Block\Widget" name="mpfbplugin-sdk"
+            <block class="Mageplaza\FacebookPlugin\Block\Facebook" name="mpfbplugin-sdk"
                    as="mpfbplugin.sdk" template="Mageplaza_FacebookPlugin::sdk.phtml" ifconfig="mpfbplugin/general/enabled"/>
         </referenceContainer>
     </body>

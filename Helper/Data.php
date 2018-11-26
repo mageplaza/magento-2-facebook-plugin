@@ -29,13 +29,14 @@ class Data extends AbstractData
 
     /**
      * Retrieve all the values in the configuration of the fb widget
+     *
      * @param null $storeId
      *
      * @return mixed
      */
     public function getFbPageConfig($storeId = null)
     {
-        return $this->getModuleConfig('fbpage',$storeId);
+        return $this->getModuleConfig('fbpage', $storeId);
     }
 
     /**
@@ -45,7 +46,7 @@ class Data extends AbstractData
      */
     public function getUrlConfig($storeId = null)
     {
-        return $this->getModuleConfig('fbpage/url',$storeId);
+        return $this->getModuleConfig('fbpage/url', $storeId);
     }
 
     /**
@@ -55,18 +56,19 @@ class Data extends AbstractData
      */
     public function isEnabledFbPage($storeId = null)
     {
-        return $this->getModuleConfig('fbpage/enabled',$storeId);
+        return $this->getModuleConfig('fbpage/enabled', $storeId);
     }
 
     /**
      * Retrieve all the values in the configuration of the fb comments
+     *
      * @param null $storeId
      *
      * @return mixed
      */
     public function getFbCommentsConfig($storeId = null)
     {
-        return $this->getModuleConfig('fbcomments',$storeId);
+        return $this->getModuleConfig('fbcomments', $storeId);
     }
 
     /**
@@ -76,6 +78,6 @@ class Data extends AbstractData
      */
     public function isEnabledFbComments($storeId = null)
     {
-        return $this->getModuleConfig('fbcomments/enabled',$storeId);
+        return $this->getModuleConfig('fbcomments/enabled', $storeId);
     }
 }
