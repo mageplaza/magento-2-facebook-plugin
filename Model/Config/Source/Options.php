@@ -24,15 +24,20 @@ namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
 class Options implements \Magento\Framework\Option\ArrayInterface
 {
+    const CONFIG = 0;
+    const CUSTOM   = 1;
+    /**
+     * @return array
+     */
     public function toOptionArray()
     {
         $options = [
             [
-                'value' => 0,
+                'value' => self::CONFIG,
                 'label' => __('Use Config')
             ],
             [
-                'value' => 1,
+                'value' => self::CUSTOM,
                 'label' => __('Custom')
             ]
         ];

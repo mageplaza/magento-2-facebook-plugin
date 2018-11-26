@@ -40,6 +40,15 @@ class TabComment extends Facebook
      */
     protected $registry;
 
+    /**
+     * TabComment constructor.
+     *
+     * @param Template\Context $context
+     * @param helperData $helperData
+     * @param Resolver $resolver
+     * @param Registry $registry
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         helperData $helperData,
@@ -54,7 +63,7 @@ class TabComment extends Facebook
     }
 
     /**
-     * set Tab Name
+     * Set Tab title
      */
     public function setTabTitle()
     {
@@ -63,6 +72,9 @@ class TabComment extends Facebook
         $this->setTitle($title);
     }
 
+    /**
+     * @return bool
+     */
     public function isEnabled()
     {
         $product = $this->registry->registry('current_product');

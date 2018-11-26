@@ -20,14 +20,18 @@
  */
 namespace Mageplaza\FacebookPlugin\Block;
 
+use Mageplaza\FacebookPlugin\Model\Config\Source\Options;
 class Widget extends Facebook
 {
-    protected $_template = "facebookwidget.phtml";
+    protected $_template = "facebookpage.phtml";
 
+    /**
+     * Retrieve all options for Facebook page
+     */
     public function getAllOptions() {
         $option = $this->getData('options');
-        if ($option == 0) {
-            $this->setData(array_merge($this->helperData->getFbWidgetConfig(),$this->getData()));
+        if ($option == Options::CONFIG) {
+            $this->setData(array_merge($this->helperData->getFbPageConfig(),$this->getData()));
         }
     }
 
@@ -37,7 +41,7 @@ class Widget extends Facebook
      * @return mixed|string
      */
     public function getFacebookUrl() {
-        $url = $this->getData('options') == 1 ? $this->getData('url') : $this->helperData->getUrlConfig();
+        $url = $this->getData('options') == Options::CUSTOM ? $this->getData('url') : $this->helperData->getUrlConfig();
         if ($url && strpos($url,'http') === false) {
             $url = 'https://'.$url;
         }

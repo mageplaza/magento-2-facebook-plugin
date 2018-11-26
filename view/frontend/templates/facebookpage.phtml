@@ -20,7 +20,7 @@
  */
 
 $block->getAllOptions();
-if ($block->getHelperData()->isEnabled() && $block->getHelperData()->isEnabledFbWidget()) : ?>
+if ($block->getHelperData()->isEnabled() && $block->getHelperData()->isEnabledFbPage()) : ?>
     <div class="fb-page"
          data-tabs="<?php echo $block->getData('tabs') ?>"
          data-href="<?php echo $block->getFacebookUrl() ?>"

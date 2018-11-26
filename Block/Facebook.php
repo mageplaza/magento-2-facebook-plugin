@@ -59,6 +59,9 @@ abstract class Facebook extends Template implements BlockInterface
         parent::__construct($context, $data);
     }
 
+    /**
+     * @return helperData
+     */
     public function getHelperData() {
         return $this->helperData;
     }

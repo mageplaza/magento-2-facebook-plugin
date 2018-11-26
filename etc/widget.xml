@@ -21,9 +21,9 @@
  */
 -->
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
-    <widget class="Mageplaza\FacebookPlugin\Block\Widget" id="mageplaza_facebook_widget">
-        <label>Mageplaza Facebook Widget</label>
-        <description>Create facebook widget to store.</description>
+    <widget class="Mageplaza\FacebookPlugin\Block\Widget" id="mpfbplugin_widget">
+        <label>Mageplaza Facebook Plugin</label>
+        <description>Create facebook plugin to store.</description>
         <parameters>
             <parameter name="options" xsi:type="select" required="true" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\Options">
                 <label>Facebook widget options</label>

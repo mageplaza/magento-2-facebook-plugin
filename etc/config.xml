@@ -22,11 +22,11 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <fbplugin>
+        <mpfbplugin>
             <general>
                 <enabled>1</enabled>
             </general>
-            <fbwidget>
+            <fbpage>
                 <enabled>1</enabled>
                 <tabs>timeline</tabs>
                 <width>340</width>
@@ -36,13 +36,13 @@
                 <hide_cta>false</hide_cta>
                 <small_header>false</small_header>
                 <adapt_container_width>true</adapt_container_width>
-            </fbwidget>
+            </fbpage>
             <fbcomments>
                 <enabled>0</enabled>
                 <title>Facebook comments</title>
                 <width>550</width>
                 <num_posts>5</num_posts>
             </fbcomments>
-        </fbplugin>
+        </mpfbplugin>
     </default>
 </config>

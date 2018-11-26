@@ -23,12 +23,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="head.additional">
-            <block class="Mageplaza\FacebookPlugin\Block\Product\TabComment" name="facebook-comment-head"
-                   as="mageplaza.facebook.comment.head" template="Mageplaza_FacebookPlugin::product/head.phtml" ifconfig="fbplugin/fbcomments/enabled"/>
+            <block class="Mageplaza\FacebookPlugin\Block\Product\TabComment" name="mpfbplugin-comment-head"
+                   as="mpfbplugin.comment.head" template="Mageplaza_FacebookPlugin::product/head.phtml" ifconfig="mpfbplugin/fbcomments/enabled"/>
         </referenceBlock>
         <referenceBlock name="product.info.details">
-            <block class="Mageplaza\FacebookPlugin\Block\Product\TabComment" name="facebook-comment"
-                   template="Mageplaza_FacebookPlugin::product/tabcomment.phtml" group="detailed_info" ifconfig="fbplugin/fbcomments/enabled"/>
+            <block class="Mageplaza\FacebookPlugin\Block\Product\TabComment" name="mpfbplugin-comment"
+                   template="Mageplaza_FacebookPlugin::product/tabcomment.phtml" group="detailed_info" ifconfig="mpfbplugin/fbcomments/enabled"/>
         </referenceBlock>
     </body>
 </page>

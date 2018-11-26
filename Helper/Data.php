@@ -25,7 +25,7 @@ use Mageplaza\Core\Helper\AbstractData;
 
 class Data extends AbstractData
 {
-    const CONFIG_MODULE_PATH = 'fbplugin';
+    const CONFIG_MODULE_PATH = 'mpfbplugin';
 
     /**
      * Retrieve all the values in the configuration of the fb widget
@@ -33,9 +33,9 @@ class Data extends AbstractData
      *
      * @return mixed
      */
-    public function getFbWidgetConfig($storeId = null)
+    public function getFbPageConfig($storeId = null)
     {
-        return $this->getModuleConfig('fbwidget',$storeId);
+        return $this->getModuleConfig('fbpage',$storeId);
     }
 
     /**
@@ -45,7 +45,7 @@ class Data extends AbstractData
      */
     public function getUrlConfig($storeId = null)
     {
-        return $this->getModuleConfig('fbwidget/url',$storeId);
+        return $this->getModuleConfig('fbpage/url',$storeId);
     }
 
     /**
@@ -53,9 +53,9 @@ class Data extends AbstractData
      *
      * @return mixed
      */
-    public function isEnabledFbWidget($storeId = null)
+    public function isEnabledFbPage($storeId = null)
     {
-        return $this->getModuleConfig('fbwidget/enabled',$storeId);
+        return $this->getModuleConfig('fbpage/enabled',$storeId);
     }
 
     /**

@@ -22,7 +22,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="fbplugin" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="mpfbplugin" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Facebook Plugin</label>
             <tab>mageplaza</tab>
@@ -52,11 +52,11 @@
                     <comment><![CDATA[Create a Facebook app <a href="https://developers.facebook.com/apps" target="_bank">here.</a>
 Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
                     <depends>
-                        <field id="fbplugin/general/enabled">1</field>
+                        <field id="mpfbplugin/general/enabled">1</field>
                     </depends>
                 </field>
             </group>
-            <group id="fbwidget" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="fbpage" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Facebook Plugin</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable</label>
@@ -66,7 +66,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 <field id="url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Facebook URL</label>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                     <comment>The URL of the Facebook Page</comment>
                 </field>
@@ -74,7 +74,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <label>Tabs</label>
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\Tabs</source_model>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                     <comment>Tabs to render, e.g., timeline, events, messages. Use a comma-separated list to add multiple tabs, e.g., timeline, events. Default: timeline</comment>
                 </field>
@@ -82,14 +82,14 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <label>Width</label>
                     <comment>The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Height</label>
                     <comment>The pixel height of the plugin. Min. is 70 px</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="hide_cover" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -97,7 +97,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Hide cover photo in the header. Default: No</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="show_facepile" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -105,7 +105,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Show profile photos when friends like this.</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="hide_cta" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -113,7 +113,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Hide the custom Call To Action button (if available)</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="small_header" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -121,7 +121,7 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Use the small header instead.</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="adapt_container_width" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -129,13 +129,13 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
                     <comment>Try to fit inside the container width. Default: Yes</comment>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
                 <field id="snippet" translate="label" type="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Snippet Code</label>
                     <depends>
-                        <field id="fbplugin/fbwidget/enabled">1</field>
+                        <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                     <frontend_model>Mageplaza\FacebookPlugin\Block\Adminhtml\System\Snippet</frontend_model>
                 </field>
@@ -150,21 +150,21 @@ Go to <a href="developers.facebook.com/tools/comments" target="_bank">developers
                 <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Title</label>
                     <depends>
-                        <field id="fbplugin/fbcomments/enabled">1</field>
+                        <field id="mpfbplugin/fbcomments/enabled">1</field>
                     </depends>
                     <comment>Enter the title of the tab. Default: Facebook comments</comment>
                 </field>
                 <field id="width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width</label>
                     <depends>
-                        <field id="fbplugin/fbcomments/enabled">1</field>
+                        <field id="mpfbplugin/fbcomments/enabled">1</field>
                     </depends>
                     <comment>The width of the comment plugin on the webpage. The minimum width is 320 px</comment>
                 </field>
                 <field id="num_posts" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Number of Posts</label>
                     <depends>
-                        <field id="fbplugin/fbcomments/enabled">1</field>
+                        <field id="mpfbplugin/fbcomments/enabled">1</field>
                     </depends>
                     <comment>The number of comments to show by default. The minimum value is 1.</comment>
                 </field>
