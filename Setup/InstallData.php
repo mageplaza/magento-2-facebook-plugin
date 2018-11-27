@@ -60,19 +60,19 @@ class InstallData implements InstallDataInterface
          */
         $eavSetup->removeAttribute(Product::ENTITY, 'mp_facebook_comments');
         $eavSetup->addAttribute(Product::ENTITY, 'mp_facebook_comments', [
-                'type'                    => 'varchar',
+                'type'                    => 'int',
                 'backend'                 => '',
                 'frontend'                => '',
-                'label'                   => 'Disabled Facebook Comments',
-                'note'                    => 'Added by Mageplaza Facebook Plugin',
-                'input'                   => 'select',
+                'label'                   => __('Disabled Facebook Comments'),
+                'note'                    => 'Added by Mageplaza Facebook',
+                'input'                   => 'boolean',
                 'class'                   => '',
                 'source'                  => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
                 'global'                  => ScopedAttributeInterface::SCOPE_GLOBAL,
                 'visible'                 => true,
                 'required'                => false,
-                'user_defined'            => false,
-                'default'                 => '',
+                'user_defined'            => true,
+                'default'                 => 0,
                 'searchable'              => false,
                 'filterable'              => false,
                 'comparable'              => false,
@@ -81,7 +81,7 @@ class InstallData implements InstallDataInterface
                 'unique'                  => false,
                 'group'                   => '',
                 'sort_order'              => 100,
-                'apply_to'                => '',
+                'apply_to'                => ''
             ]
         );
     }
