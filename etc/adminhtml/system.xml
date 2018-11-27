@@ -50,7 +50,7 @@
                     <label>Facebook App ID</label>
                     <validate>required-entry</validate>
                     <comment><![CDATA[Create a Facebook app <a href="https://developers.facebook.com/apps" target="_bank">here.</a>
-Go to <a href="developers.facebook.com/tools/comments" target="_bank">https://developers.facebook.com/tools/comments.</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
+Go to <a href="https://developers.facebook.com/tools/comments" target="_bank">developers.facebook.com/tools/comments</a>. You will get a list of all your Facebook apps, which lets you moderate all comments associated with each app.]]></comment>
                     <depends>
                         <field id="mpfbplugin/general/enabled">1</field>
                     </depends>
