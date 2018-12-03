@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_FacebookPlugin
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mpfbplugin>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <fbpage>
+                <enabled>1</enabled>
+                <tabs>timeline</tabs>
+                <width>340</width>
+                <height>500</height>
+                <hide_cover>false</hide_cover>
+                <show_facepile>true</show_facepile>
+                <hide_cta>false</hide_cta>
+                <small_header>false</small_header>
+                <adapt_container_width>true</adapt_container_width>
+            </fbpage>
+            <fbcomments>
+                <enabled>0</enabled>
+                <title>Facebook comments</title>
+                <width>550</width>
+                <num_posts>5</num_posts>
+            </fbcomments>
+        </mpfbplugin>
+    </default>
+</config>

@@ -1,11 +1,11 @@
 ## Documentation
 
 - Installation guide: https://www.mageplaza.com/install-magento-2-extension/#solution-1-ready-to-paste
-- User Guide: https://docs.mageplaza.com/facebook-widget/
-- Product page: https://www.mageplaza.com/magento-2-facebook-widget/
+- User Guide: https://docs.mageplaza.com/facebook-plugin/
+- Product page: https://www.mageplaza.com/magento-2-facebook-plugin/
 - FAQs: https://www.mageplaza.com/faqs/
 - Get Support: https://mageplaza.freshdesk.com/ or support@mageplaza.com
-- Changelog: https://www.mageplaza.com/releases/facebook-widget/
+- Changelog: https://www.mageplaza.com/releases/facebook-plugin/
 - License agreement: https://www.mageplaza.com/LICENSE.txt
 
 ## How to install
@@ -20,10 +20,10 @@
 
 Backup your Magento code, database before upgrading.
 
-2. Remove FacebookWidget folder
+2. Remove FacebookPlugin folder
 
 In case of customization, you should backup the customized files and modify in newer version.
-Now you remove `app/code/Mageplaza/FacebookWidget` folder. In this step, you can copy override FacebookWidget folder but this may cause of compilation issue. That why you should remove it.
+Now you remove `app/code/Mageplaza/FacebookPlugin` folder. In this step, you can copy override FacebookPlugin folder but this may cause of compilation issue. That why you should remove it.
 
 3. Upload new version
 Upload this package to Magento root directory

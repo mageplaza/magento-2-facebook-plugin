@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_FacebookPlugin
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Mageplaza\FacebookPlugin\Block\Widget" id="mpfbplugin_widget">
+        <label translate="true">Mageplaza Facebook Plugin</label>
+        <description translate="true">Create facebook plugin to store.</description>
+        <parameters>
+            <parameter name="options" xsi:type="select" required="true" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\Options">
+                <label translate="true">Facebook widget options</label>
+            </parameter>
+            <parameter name="url" xsi:type="text" required="true" visible="true">
+                <label translate="true">Facebook URL</label>
+                <description translate="true">The URL of the Facebook Page.</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="tabs" xsi:type="multiselect" required="true" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\Tabs">
+                <label translate="true">Tabs</label>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="width" xsi:type="text" required="false" visible="true">
+                <label translate="true">Width</label>
+                <description translate="true">The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px
+                </description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+                <value>340</value>
+            </parameter>
+            <parameter name="height" xsi:type="text" required="false" visible="true">
+                <label translate="true">Height</label>
+                <description translate="true">The pixel height of the plugin. Min. is 70 px.</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+                <value>500</value>
+            </parameter>
+            <parameter name="hide_cover" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse">
+                <label translate="true">Hide cover photo</label>
+                <description translate="true">Hide cover photo in the header. Default: No</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="show_facepile" xsi:type="select" required="false" visible="true">
+                <label translate="true">Show profile photo</label>
+                <description translate="true">Show the profile photo when friends like this.</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Yes</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">No</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="hide_cta" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse">
+                <label translate="true">Hide the custom Call To Action</label>
+                <description translate="true">Hide the custom Call To Action button (if available).</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="small_header" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse">
+                <label translate="true">Small header</label>
+                <description translate="true">Use the small header instead.</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="adapt_container_width" xsi:type="select" required="false" visible="true">
+                <label translate="true">Adapt width</label>
+                <description translate="true">Try to fit inside the frame width. Default: Yes.</description>
+                <depends>
+                    <parameter name="options" value="1"/>
+                </depends>
+                <options>
+                    <option name="true" value="true">
+                        <label translate="true">Yes</label>
+                    </option>
+                    <option name="false" value="false">
+                        <label translate="true">No</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * Mageplaza
  *
@@ -19,11 +18,32 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Mageplaza_FacebookPlugin" setup_version="1.0.0">
-        <sequence>
-            <module name="Mageplaza_Core"/>
-        </sequence>
-    </module>
-</config>
+
+namespace Mageplaza\FacebookPlugin\Model\Config\Source;
+
+use Magento\Framework\Option\ArrayInterface;
+
+class TrueFalse implements ArrayInterface
+{
+    /**
+     * to option array
+     *
+     * @return array
+     */
+    public function toOptionArray()
+    {
+        $options = [
+            [
+                'value' => 'false',
+                'label' => __('No')
+            ],
+            [
+                'value' => 'true',
+                'label' => __('Yes')
+            ]
+        ];
+
+        return $options;
+
+    }
+}

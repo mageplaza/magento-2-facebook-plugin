@@ -1,1 +1,1 @@
-- User guide: https://docs.mageplaza.com/facebook-widget/
+- User guide: https://docs.mageplaza.com/facebook-plugin/

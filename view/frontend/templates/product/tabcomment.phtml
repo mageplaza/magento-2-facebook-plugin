@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * Mageplaza
  *
@@ -19,11 +18,15 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Mageplaza_FacebookPlugin" setup_version="1.0.0">
-        <sequence>
-            <module name="Mageplaza_Core"/>
-        </sequence>
-    </module>
-</config>
+?>
+
+<?php /** @var Mageplaza\FacebookPlugin\Block\Product\TabComment $block */
+if ($block->isEnabled()) : ?>
+    <?php $options = $block->getHelperData()->getFbCommentsConfig() ?>
+    <div class="fb-comments"
+         data-href="<?php echo $block->getRequest()->getUriString() ?>"
+         data-numposts="<?php echo isset($options['num_posts']) ? $options['num_posts'] : 5 ?>"
+         data-width ="<?php echo $options['width']?>
+    ">
+    </div>
+<?php endif; ?>
