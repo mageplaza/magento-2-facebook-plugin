@@ -28,10 +28,12 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
+/**
+ * Class InstallData
+ * @package Mageplaza\FacebookPlugin\Setup
+ */
 class InstallData implements InstallDataInterface
 {
-
-
     /**
      * @var \Magento\Eav\Setup\EavSetupFactory
      */

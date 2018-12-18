@@ -26,6 +26,10 @@ use Magento\Framework\View\Element\Template;
 use Magento\Widget\Block\BlockInterface;
 use Mageplaza\FacebookPlugin\Helper\Data as helperData;
 
+/**
+ * Class Facebook
+ * @package Mageplaza\FacebookPlugin\Block
+ */
 abstract class Facebook extends Template implements BlockInterface
 {
     /**
@@ -88,5 +92,4 @@ abstract class Facebook extends Template implements BlockInterface
 
         return $appId;
     }
-
 }

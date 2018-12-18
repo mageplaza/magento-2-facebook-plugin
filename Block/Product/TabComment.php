@@ -21,13 +21,16 @@
 
 namespace Mageplaza\FacebookPlugin\Block\Product;
 
-
 use Magento\Framework\Locale\Resolver;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Element\Template;
 use Mageplaza\FacebookPlugin\Block\Facebook;
 use Mageplaza\FacebookPlugin\Helper\Data as helperData;
 
+/**
+ * Class TabComment
+ * @package Mageplaza\FacebookPlugin\Block\Product
+ */
 class TabComment extends Facebook
 {
     /**
@@ -58,6 +61,7 @@ class TabComment extends Facebook
     )
     {
         $this->registry = $registry;
+
         parent::__construct($context, $helperData, $resolver, $data);
         $this->setTabTitle();
     }

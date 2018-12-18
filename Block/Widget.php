@@ -18,12 +18,20 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
+
 namespace Mageplaza\FacebookPlugin\Block;
 
 use Mageplaza\FacebookPlugin\Model\Config\Source\Options;
 
+/**
+ * Class Widget
+ * @package Mageplaza\FacebookPlugin\Block
+ */
 class Widget extends Facebook
 {
+    /**
+     * @var string
+     */
     protected $_template = "facebookpage.phtml";
 
     /**

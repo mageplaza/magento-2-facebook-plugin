@@ -23,6 +23,10 @@ namespace Mageplaza\FacebookPlugin\Helper;
 
 use Mageplaza\Core\Helper\AbstractData;
 
+/**
+ * Class Data
+ * @package Mageplaza\FacebookPlugin\Helper
+ */
 class Data extends AbstractData
 {
     const CONFIG_MODULE_PATH = 'mpfbplugin';

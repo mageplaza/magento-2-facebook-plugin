@@ -21,9 +21,12 @@
 
 namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
-
 use Magento\Framework\Option\ArrayInterface;
 
+/**
+ * Class Options
+ * @package Mageplaza\FacebookPlugin\Model\Config\Source
+ */
 class Options implements ArrayInterface
 {
     const CONFIG = 0;

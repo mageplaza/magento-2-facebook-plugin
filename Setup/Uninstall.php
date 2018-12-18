@@ -26,6 +26,10 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 use Magento\Framework\Setup\UninstallInterface;
 
+/**
+ * Class Uninstall
+ * @package Mageplaza\FacebookPlugin\Setup
+ */
 class Uninstall implements UninstallInterface
 {
     /**

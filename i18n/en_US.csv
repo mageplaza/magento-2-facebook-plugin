@@ -1,0 +1,43 @@
+"Use the following code to show facebook plugin in any places which you want.","Use the following code to show facebook plugin in any places which you want."
+"CMS Page/Static Block","CMS Page/Static Block"
+"Template .phtml file","Template .phtml file"
+"Layout file","Layout file"
+title,title
+"Use Config","Use Config"
+Custom,Custom
+Timeline,Timeline
+Events,Events
+Messages,Messages
+No,No
+Yes,Yes
+"Disabled Facebook Comments","Disabled Facebook Comments"
+"Facebook Plugin","Facebook Plugin"
+General,General
+Enable,Enable
+"Facebook App ID","Facebook App ID"
+"Facebook URL","Facebook URL"
+Tabs,Tabs
+Width,Width
+Height,Height
+"Hide cover photo","Hide cover photo"
+"Show profile photo","Show profile photo"
+"Hide the custom Call To Action","Hide the custom Call To Action"
+"Small header","Small header"
+"Adapt Width","Adapt Width"
+"Snippet Code","Snippet Code"
+"Facebook Comments","Facebook Comments"
+"Enable Facebook Comment","Enable Facebook Comment"
+Title,Title
+"Number of Posts","Number of Posts"
+"Mageplaza Facebook Plugin","Mageplaza Facebook Plugin"
+"Create facebook plugin to store.","Create facebook plugin to store."
+"Facebook widget options","Facebook widget options"
+"The URL of the Facebook Page.","The URL of the Facebook Page."
+"The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px","The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px"
+"The pixel height of the plugin. Min. is 70 px.","The pixel height of the plugin. Min. is 70 px."
+"Hide cover photo in the header. Default: No","Hide cover photo in the header. Default: No"
+"Show the profile photo when friends like this.","Show the profile photo when friends like this."
+"Hide the custom Call To Action button (if available).","Hide the custom Call To Action button (if available)."
+"Use the small header instead.","Use the small header instead."
+"Adapt width","Adapt width"
+"Try to fit inside the frame width. Default: Yes.","Try to fit inside the frame width. Default: Yes."

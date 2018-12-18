@@ -18,15 +18,14 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-?>
 
-<?php /** @var Mageplaza\FacebookPlugin\Block\Product\TabComment $block */
+/** @var Mageplaza\FacebookPlugin\Block\Product\TabComment $block */
 if ($block->isEnabled()) : ?>
     <?php $options = $block->getHelperData()->getFbCommentsConfig() ?>
     <div class="fb-comments"
          data-href="<?php echo $block->getRequest()->getUriString() ?>"
          data-numposts="<?php echo isset($options['num_posts']) ? $options['num_posts'] : 5 ?>"
-         data-width ="<?php echo $options['width']?>
+         data-width="<?php echo $options['width'] ?>
     ">
     </div>
 <?php endif; ?>

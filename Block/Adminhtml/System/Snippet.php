@@ -24,6 +24,10 @@ namespace Mageplaza\FacebookPlugin\Block\Adminhtml\System;
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
 
+/**
+ * Class Snippet
+ * @package Mageplaza\FacebookPlugin\Block\Adminhtml\System
+ */
 class Snippet extends Field
 {
     /**

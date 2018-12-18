@@ -23,6 +23,10 @@ namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;
 
+/**
+ * Class TrueFalse
+ * @package Mageplaza\FacebookPlugin\Model\Config\Source
+ */
 class TrueFalse implements ArrayInterface
 {
     /**
@@ -44,6 +48,5 @@ class TrueFalse implements ArrayInterface
         ];
 
         return $options;
-
     }
 }

@@ -18,10 +18,15 @@
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
+
 namespace Mageplaza\FacebookPlugin\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;
 
+/**
+ * Class Tabs
+ * @package Mageplaza\FacebookPlugin\Model\Config\Source
+ */
 class Tabs implements ArrayInterface
 {
     const TIMELINE = 'timeline';
@@ -51,6 +56,5 @@ class Tabs implements ArrayInterface
         ];
 
         return $options;
-
     }
 }
