@@ -2,6 +2,10 @@
 
 [Facebook Plugin by Mageplaza](http://www.mageplaza.com/magento-2-facebook-plugin/) helps stores to integrate Facebook page into the shopping sites. This extension creates the convenience for customers to access stores’ information as well as contact stores easily. As a result, the number of followers to the Fan page increases significantly and the conversion rate rises accordingly. 
 
+[![Latest Stable Version](https://poser.pugx.org/mageplaza/module-facebook-plugin/v/stable)](https://packagist.org/packages/mageplaza/module-facebook-plugin)
+[![Total Downloads](https://poser.pugx.org/mageplaza/module-facebook-plugin/downloads)](https://packagist.org/packages/mageplaza/module-facebook-plugin)
+
+
 ## 1. Documentation
 
 - [Installation guide](https://www.mageplaza.com/install-magento-2-extension/)
