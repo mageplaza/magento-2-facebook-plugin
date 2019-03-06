@@ -30,7 +30,7 @@ use Mageplaza\FacebookPlugin\Helper\Data as helperData;
  * Class Facebook
  * @package Mageplaza\FacebookPlugin\Block
  */
-abstract class Facebook extends Template implements BlockInterface
+class Facebook extends Template implements BlockInterface
 {
     /**
      * @var helperData
