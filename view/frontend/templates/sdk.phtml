@@ -28,7 +28,7 @@ if ($block->getHelperData()->isEnabled()) : ?>
             if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
-            js.src = '<?php echo $src ?>';
+            js.src = '<?= /** @noEscape */ $src ?>';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 <?php endif; ?>

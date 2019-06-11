@@ -23,14 +23,14 @@
 $block->getAllOptions();
 if ($block->getHelperData()->isEnabled() && $block->getHelperData()->isEnabledFbPage()) : ?>
     <div class="fb-page"
-         data-tabs="<?php echo $block->getData('tabs') ?>"
-         data-href="<?php echo $block->getFacebookUrl() ?>"
-         data-width="<?php echo $block->getData('width') ?>"
-         data-height="<?php echo $block->getData('height') ?>"
-         data-hide-cover="<?php echo $block->getData('hide_cover') ?>"
-         data-show-facepile="<?php echo $block->getData('show_facepile') ?>"
-         data-hide-cta="<?php echo $block->getData('hide_cta') ?>"
-         data-small-header="<?php echo $block->getData('small_header') ?>"
-         data-adapt-container-width="<?php echo $block->getData('adapt_container_width') ?>">
+         data-tabs="<?= /** @noEscape */ $block->getData('tabs') ?>"
+         data-href="<?= /** @noEscape */ $block->getFacebookUrl() ?>"
+         data-width="<?= /** @noEscape */ $block->getData('width') ?>"
+         data-height="<?= /** @noEscape */ $block->getData('height') ?>"
+         data-hide-cover="<?= /** @noEscape */ $block->getData('hide_cover') ?>"
+         data-show-facepile="<?= /** @noEscape */ $block->getData('show_facepile') ?>"
+         data-hide-cta="<?= /** @noEscape */ $block->getData('hide_cta') ?>"
+         data-small-header="<?= /** @noEscape */ $block->getData('small_header') ?>"
+         data-adapt-container-width="<?= /** @noEscape */ $block->getData('adapt_container_width') ?>">
     </div>
 <?php endif; ?>

@@ -55,10 +55,9 @@ class Facebook extends Template implements BlockInterface
         helperData $helperData,
         Resolver $resolver,
         array $data = []
-    )
-    {
+    ) {
         $this->helperData = $helperData;
-        $this->locale     = $resolver;
+        $this->locale = $resolver;
 
         parent::__construct($context, $data);
     }
@@ -78,9 +77,7 @@ class Facebook extends Template implements BlockInterface
      */
     public function getLanguage()
     {
-        $lang = $this->locale->getLocale();
-
-        return $lang;
+        return $this->locale->getLocale();
     }
 
     /**
@@ -88,8 +85,6 @@ class Facebook extends Template implements BlockInterface
      */
     public function getAppId()
     {
-        $appId = $this->helperData->getConfigGeneral('app_id');
-
-        return $appId;
+        return $this->helperData->getConfigGeneral('app_id');
     }
 }
