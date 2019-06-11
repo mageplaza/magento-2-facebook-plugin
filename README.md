@@ -1,6 +1,10 @@
 # Magento 2 Facebook Plugin Extension 
 
-[Facebook Plugin by Mageplaza](http://www.mageplaza.com/magento-2-facebook-plugin/) helps stores to integrate Facebook page into the shopping sites. This extension creates the convenience for customers to access stores’ information as well as contact stores easily. As a result, the number of followers to the Fan page increases significantly and the conversion rate rises accordingly. 
+**[Magento 2 Facebook Plugin by Mageplaza](http://www.mageplaza.com/magento-2-facebook-plugin/)** helps stores to integrate Facebook page into the shopping sites. **Facebook Plugin extension** creates the convenience for customers to access stores’ information as well as contact stores easily. As a result, the number of followers to the Fan page increases significantly and the conversion rate rises accordingly. 
+
+[![Latest Stable Version](https://poser.pugx.org/mageplaza/module-facebook-plugin/v/stable)](https://packagist.org/packages/mageplaza/module-facebook-plugin)
+[![Total Downloads](https://poser.pugx.org/mageplaza/module-facebook-plugin/downloads)](https://packagist.org/packages/mageplaza/module-facebook-plugin)
+
 
 ## 1. Documentation
 
@@ -30,13 +34,13 @@ A: Yes, absolutely. Like button will display automatically.  Share is one type o
 
 **Q: I want to add comment box on Product Page so our customers to leave questions. How can I do?** 
 
-A: You should enable Facebook comment from the admin backend so that Comment Tab will display on Product Page. Customers will login their Facebook account to leave their questions or feedback easily. Note that this extension is properly compatible with [Social Login extension](https://www.mageplaza.com/magento-2-social-login-extension/). 
+A: You should enable Facebook comment from the admin backend so that Comment Tab will display on Product Page. Customers will login their Facebook account to leave their questions or feedback easily. Note that this extension is properly compatible with [Social Login](https://www.mageplaza.com/magento-2-social-login-extension/). 
 
 **Q: Can I adjust the size of Facebook Plugin to suit my store size?** 
 
 A: Yes, definitely. From the backend, please set width and height for the plugin. 
 
-## 3. How to install Facebook Plugin extension for Magento 2
+## 3. How to install Magento 2 Facebook Plugin extension
 
 Install via composer (recommend)
 
@@ -48,24 +52,24 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
 
-## 4. Highlight Features
+## 4. Facebook Plugin Highlight Features
 
 ### Integrate Facebook information into store website
 
-![facebook login 1](https://i.imgur.com/Fyl7n3f.png)
+![Magento 2 Facebook Plugin extension](https://i.imgur.com/Fyl7n3f.png)
 
-Mageplaza Facebook Extension enables the admin to add tabs on Facebook Page on store website with 3 options: Timeline, Event and Messages. By embedding Facebook Feed on your website, the store owner can display all the latest updates on Timeline, Event, Messages to customers visiting their site.
+**Mageplaza Facebook Extension** enables the admin to add tabs on Facebook Page on store website with 3 options: **Timeline, Event and Messages**. By embedding **Facebook Feed** on your website, the store owner can display all the latest updates on Timeline, Event, Messages to customers visiting their site.
 
 Each of these 3 tabs takes a specific function:
 - **Timeline tab** for all latest news on products and history
 - **Event tab** for upcoming events
 - **Messages tab** for interacting between store’s admin and visitors.
 
-### Easily leave Facebook Comment
+### Facebook Comments Widget
 
-![facebook login 2](https://i.imgur.com/l1bc3dY.png)
+![Magento 2 Facebook Comments Widget](https://i.imgur.com/l1bc3dY.png)
 
-Magento 2 Facebook Module allows the customer to leave their comment with ease, right on the website’s product page. Right here customers can post their feedback, questions about the product which they are interested in, by using their own Facebook account. This extension is really supportive to the store’s admin, which allows customers who left comments to get Facebook notifications right when the admin respond. 
+**Magento 2 Facebook Widget** allows the customer to leave their comment with ease, right on the website’s product page. Right here customers can post their feedback, questions about the product which they are interested in, by using their own Facebook account. This extension is really supportive to the store’s admin, which allows customers who left comments to get Facebook notifications right when the admin respond. 
 
 More amazing, any other visitors can easily see already-answered questions and feedbacks to get more information about the product. It is undeniable that a product page with feedbacks and comments of many customers is likely to be trusted by new visitors. They will feel that the site is well interacting and have tendency to spend more time finding out about the product.
 
@@ -99,9 +103,9 @@ Facebook Plugin can work well on both Mobile and PC version.
 
 ### Extension compatibility 
 
-Customers can access Facebook Plugin with Mageplaza Social Login Extension. This plugin is compatible with almost third-party module as well
+Customers can access Facebook Plugin with [Magento 2 Social Login Extension](https://github.com/mageplaza/magento-2-social-login). This plugin is compatible with almost third-party module as well
 
-## 6. Full Feature Lists 
+## 6. Full Magento 2 Facebook Widget Features
 
 ### For store owners 
 - Enable/disable the plugin
@@ -121,9 +125,9 @@ Customers can access Facebook Plugin with Mageplaza Social Login Extension. This
 - Swiftly communicate with the administrator/ other visitors via Facebook login
 - Be noticed right when getting responses from posted comments/ feedbacks
 
-## 7. User Guide
+## 7. Facebook Widget User Guide
 
-### Configuration
+### Facebook Widget Configuration
 
 To start the configuration, from the Admin Panel, make your way to `Stores > Configuration > Mageplaza Extensions > Facebook Plugin > Configuration`
 
@@ -196,9 +200,9 @@ To start the configuration, from the Admin Panel, make your way to `Stores > Con
   - Set the number of posts to be displayed on 
   - The minimum number is 1
   
-### 7.2. Widget  
+### 7.2. Facebook Widget  
 
-#### Add Widget 
+#### Add Facebook Widget
 
 - [Step 1: Select the Type](#select-type)
 - [Step 2: Complete the Storefront Properties section](#storefront-properties) 
@@ -290,4 +294,26 @@ In the Layout Updates section, click on `Layout Update` to set the layout.
 - Manage comments on Facebook App 
 
 ![facebook login16](https://i.imgur.com/9hrVjbR.png)
+
+
+**People also search:**
+- magento 2 facebook widget
+- magento 2 facebook plugin
+- magento 2 facebook comments widget
+- magento 2 facebook feed plugin
+- magento 2 facebook widget plugin
+- magento 2 facebook events widget
+- magento facebook extension
+- magento 2 facebook page feed widget
+
+
+**Other free extension on Github**
+- [Magento 2 social login](https://github.com/mageplaza/magento-2-social-login)
+- [Magento 2 social share](https://github.com/mageplaza/magento-2-social-share)
+- [Magento 2 Delete Orders](https://github.com/mageplaza/magento-2-delete-orders)
+- [Magento 2 GDPR Compliance](https://github.com/mageplaza/magento-2-gdpr)
+- [Magento 2 login as customers](https://github.com/mageplaza/magento-2-login-as-customer)
+- [Magento 2 seo](https://github.com/mageplaza/magento-2-seo)
+- [Magento 2 Free Layered Navigation](https://github.com/mageplaza/magento-2-ajax-layered-navigation)
+- [Magento 2 security](https://github.com/mageplaza/magento-2-security)
 
