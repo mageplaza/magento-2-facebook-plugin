@@ -69,7 +69,7 @@ class InstallData implements InstallDataInterface
                 'note'                    => 'Added by Mageplaza Facebook',
                 'input'                   => 'boolean',
                 'class'                   => '',
-                'source'                  => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
+                'source'                  => \Magento\Eav\Model\Entity\Attribute\Source\Boolean::class,
                 'global'                  => ScopedAttributeInterface::SCOPE_GLOBAL,
                 'visible'                 => true,
                 'required'                => false,
@@ -84,7 +84,6 @@ class InstallData implements InstallDataInterface
                 'group'                   => '',
                 'sort_order'              => 100,
                 'apply_to'                => ''
-            ]
-        );
+            ]);
     }
 }

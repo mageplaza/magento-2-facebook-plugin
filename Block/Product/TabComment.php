@@ -58,11 +58,11 @@ class TabComment extends Facebook
         Resolver $resolver,
         Registry $registry,
         array $data = []
-    )
-    {
+    ) {
         $this->registry = $registry;
 
         parent::__construct($context, $helperData, $resolver, $data);
+
         $this->setTabTitle();
     }
 
@@ -72,7 +72,7 @@ class TabComment extends Facebook
     public function setTabTitle()
     {
         $options = $this->helperData->getFbCommentsConfig();
-        $title   = __(isset($options['title']) ? $options['title'] : self::TITLE);
+        $title = __(isset($options['title']) ? $options['title'] : self::TITLE);
         $this->setTitle($title);
     }
 
@@ -84,7 +84,7 @@ class TabComment extends Facebook
         $product = $this->registry->registry('current_product');
 
         return $this->helperData->isEnabled() &&
-            $this->helperData->isEnabledFbComments() &&
-            $product->getMpFacebookComments() == 0;
+               $this->helperData->isEnabledFbComments() &&
+               $product->getMpFacebookComments() == 0;
     }
 }

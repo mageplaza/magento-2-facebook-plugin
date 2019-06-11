@@ -14,30 +14,44 @@ Yes,Yes
 "Facebook Plugin","Facebook Plugin"
 General,General
 Enable,Enable
+"Select Yes to enable this module","Select Yes to enable this module"
 "Facebook App ID","Facebook App ID"
+"Select Yes to enable Facebook Plugin","Select Yes to enable Facebook Plugin"
 "Facebook URL","Facebook URL"
+"The URL of the Facebook Page","The URL of the Facebook Page"
 Tabs,Tabs
 Width,Width
+"The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px","The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px"
 Height,Height
+"The pixel height of the plugin. Min. is 70 px","The pixel height of the plugin. Min. is 70 px"
 "Hide cover photo","Hide cover photo"
+"Hide cover photo in the header. Default: No","Hide cover photo in the header. Default: No"
 "Show profile photo","Show profile photo"
+"Show profile photos when friends like this.","Show profile photos when friends like this."
 "Hide the custom Call To Action","Hide the custom Call To Action"
+"Hide the custom Call To Action button (if available)","Hide the custom Call To Action button (if available)"
 "Small header","Small header"
+"Use the small header instead.","Use the small header instead."
 "Adapt Width","Adapt Width"
+"Try to fit inside the container width. Default: Yes","Try to fit inside the container width. Default: Yes"
 "Snippet Code","Snippet Code"
 "Facebook Comments","Facebook Comments"
 "Enable Facebook Comment","Enable Facebook Comment"
+"Select Yes to add a Facebook Comments tab in Product Detail page.","Select Yes to add a Facebook Comments tab in Product Detail page."
 Title,Title
+"Enter the title of the tab. Default: Facebook comments","Enter the title of the tab. Default: Facebook comments"
+"The width of the comment plugin on the webpage. The minimum width is 320 px","The width of the comment plugin on the webpage. The minimum width is 320 px"
 "Number of Posts","Number of Posts"
+"The number of comments to show by default. The minimum value is 1.","The number of comments to show by default. The minimum value is 1."
 "Mageplaza Facebook Plugin","Mageplaza Facebook Plugin"
 "Create facebook plugin to store.","Create facebook plugin to store."
 "Facebook widget options","Facebook widget options"
 "The URL of the Facebook Page.","The URL of the Facebook Page."
-"The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px","The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px"
+"The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px
+                ","The pixel width of the plugin. Min. is 180 px and Max. is 500 px. Default: 340 px
+                "
 "The pixel height of the plugin. Min. is 70 px.","The pixel height of the plugin. Min. is 70 px."
-"Hide cover photo in the header. Default: No","Hide cover photo in the header. Default: No"
 "Show the profile photo when friends like this.","Show the profile photo when friends like this."
 "Hide the custom Call To Action button (if available).","Hide the custom Call To Action button (if available)."
-"Use the small header instead.","Use the small header instead."
 "Adapt width","Adapt width"
 "Try to fit inside the frame width. Default: Yes.","Try to fit inside the frame width. Default: Yes."
