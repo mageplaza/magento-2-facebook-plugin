@@ -45,12 +45,20 @@ A: Yes, definitely. From the backend, please set width and height for the plugin
 Install via composer (recommend)
 
 Run the following command in Magento 2 root folder:
+With Marketing Automation (recommend):
+```
+composer require mageplaza/module-facebook-plugin mageplaza/module-smtp
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
+Without Marketing Automation:
 ```
 composer require mageplaza/module-facebook-plugin
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
+
 
 ## 4. Facebook Plugin Highlight Features
 
