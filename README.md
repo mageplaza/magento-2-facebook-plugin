@@ -45,12 +45,20 @@ A: Yes, definitely. From the backend, please set width and height for the plugin
 Install via composer (recommend)
 
 Run the following command in Magento 2 root folder:
+With Marketing Automation (recommend):
+```
+composer require mageplaza/module-facebook-plugin mageplaza/module-smtp
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
 
+Without Marketing Automation:
 ```
 composer require mageplaza/module-facebook-plugin
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
+
 
 ## 4. Facebook Plugin Highlight Features
 
@@ -317,3 +325,14 @@ In the Layout Updates section, click on `Layout Update` to set the layout.
 - [Magento 2 Free Layered Navigation](https://github.com/mageplaza/magento-2-ajax-layered-navigation)
 - [Magento 2 security](https://github.com/mageplaza/magento-2-security)
 
+**Explore more [Magento 2 extension on Marketplace](https://marketplace.magento.com/partner/Mageplaza):**
+- [Magento 2 Delivery Time](https://marketplace.magento.com/mageplaza-module-delivery-time.html)
+- [Magento 2 Promo Bar](https://marketplace.magento.com/mageplaza-module-promo-bar.html)
+- [Magento 2 Same Order Number](https://marketplace.magento.com/mageplaza-module-same-order-number.html)
+- [Magento 2 Multi Flat Rates](https://marketplace.magento.com/mageplaza-module-multi-flat-rates.html)
+- [Magento 2 Social Share](https://marketplace.magento.com/mageplaza-module-social-share.html)
+- [Magento 2 Instagram Feed](https://marketplace.magento.com/mageplaza-module-instagram-feed.html)
+- [Magento 2 Quick Cart](https://marketplace.magento.com/mageplaza-module-quick-cart.html)
+- [Magento 2 Import Export CMS](https://marketplace.magento.com/mageplaza-module-import-export-cms.html)
+- [Magento 2 Promo Bar](https://marketplace.magento.com/mageplaza-module-promo-bar.html)
+- [Magento 2 Mass Product Actions](https://marketplace.magento.com/mageplaza-module-mass-product-actions.html)
