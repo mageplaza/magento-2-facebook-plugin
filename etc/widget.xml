@@ -65,21 +65,21 @@
                     <parameter name="options" value="1"/>
                 </depends>
             </parameter>
-            <parameter name="show_facepile" xsi:type="select" required="false" visible="true">
-                <label translate="true">Show profile photo</label>
-                <description translate="true">Show the profile photo when friends like this.</description>
-                <depends>
-                    <parameter name="options" value="1"/>
-                </depends>
-                <options>
-                    <option name="true" value="true">
-                        <label translate="true">Yes</label>
-                    </option>
-                    <option name="false" value="false">
-                        <label translate="true">No</label>
-                    </option>
-                </options>
-            </parameter>
+<!--            <parameter name="show_facepile" xsi:type="select" required="false" visible="true">-->
+<!--                <label translate="true">Show profile photo</label>-->
+<!--                <description translate="true">Show the profile photo when friends like this.</description>-->
+<!--                <depends>-->
+<!--                    <parameter name="options" value="1"/>-->
+<!--                </depends>-->
+<!--                <options>-->
+<!--                    <option name="true" value="true">-->
+<!--                        <label translate="true">Yes</label>-->
+<!--                    </option>-->
+<!--                    <option name="false" value="false">-->
+<!--                        <label translate="true">No</label>-->
+<!--                    </option>-->
+<!--                </options>-->
+<!--            </parameter>-->
             <parameter name="hide_cta" xsi:type="select" required="false" visible="true" source_model="Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse">
                 <label translate="true">Hide the custom Call To Action</label>
                 <description translate="true">Hide the custom Call To Action button (if available).</description>

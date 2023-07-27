@@ -101,14 +101,14 @@ Go to <a href="https://developers.facebook.com/tools/comments" target="_bank">de
                         <field id="mpfbplugin/fbpage/enabled">1</field>
                     </depends>
                 </field>
-                <field id="show_facepile" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Show profile photo</label>
-                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
-                    <comment>Show profile photos when friends like this.</comment>
-                    <depends>
-                        <field id="mpfbplugin/fbpage/enabled">1</field>
-                    </depends>
-                </field>
+<!--                <field id="show_facepile" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Show profile photo</label>-->
+<!--                    <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>-->
+<!--                    <comment>Show profile photos when friends like this.</comment>-->
+<!--                    <depends>-->
+<!--                        <field id="mpfbplugin/fbpage/enabled">1</field>-->
+<!--                    </depends>-->
+<!--                </field>-->
                 <field id="hide_cta" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide the custom Call To Action</label>
                     <source_model>Mageplaza\FacebookPlugin\Model\Config\Source\TrueFalse</source_model>
